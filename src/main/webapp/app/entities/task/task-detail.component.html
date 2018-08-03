@@ -1,0 +1,45 @@
+
+<div *ngIf="task">
+    <h2><span jhiTranslate="slackbotsApp.task.detail.title">Task</span> {{task.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="slackbotsApp.task.taskName">Task Name</span></dt>
+        <dd>
+            <span>{{task.taskName}}</span>
+        </dd>
+        <dt><span jhiTranslate="slackbotsApp.task.taskDescription">Task Description</span></dt>
+        <dd>
+            <span>{{task.taskDescription}}</span>
+        </dd>
+        <dt><span jhiTranslate="slackbotsApp.task.startDate">Start Date</span></dt>
+        <dd>
+            <span>{{task.startDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span jhiTranslate="slackbotsApp.task.endDate">End Date</span></dt>
+        <dd>
+            <span>{{task.endDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span jhiTranslate="slackbotsApp.task.remainder">Remainder</span></dt>
+        <dd>
+            <span>{{task.remainder | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span jhiTranslate="slackbotsApp.task.duration">Duration</span></dt>
+        <dd>
+            <span>{{task.duration}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'task/'+ task.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

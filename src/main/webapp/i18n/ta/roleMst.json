@@ -1,0 +1,28 @@
+{
+    "slackbotsApp": {
+        "roleMst" : {
+            "home": {
+                "title": "Role Msts",
+                "createLabel": "Role Mst-ஐ உருவாக்கு",
+                "createOrEditLabel": "Role Mst -ஐ மாற்று (அ) உருவாக்கு",
+                "search": "Search for Role Mst"
+            },
+            "created": "Role Mst புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "Role Mst மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A Role Mst நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் Role Mst {{ id }}?"
+            },
+            "detail": {
+                "title": "Role Mst"
+            },
+            "roleName": "Role Name",
+            "roleDesc": "Role Desc",
+            "createdOn": "Created On",
+            "createdBy": "Created By",
+            "updatedOn": "Updated On",
+            "updatedBy": "Updated By",
+            "roleNames": "Role Names"
+        }
+    }
+}

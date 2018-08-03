@@ -1,0 +1,23 @@
+{
+    "slackbotsApp": {
+        "context" : {
+            "home": {
+                "title": "Contexts",
+                "createLabel": "Context-ஐ உருவாக்கு",
+                "createOrEditLabel": "Context -ஐ மாற்று (அ) உருவாக்கு",
+                "search": "Search for Context"
+            },
+            "created": "Context புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "Context மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A Context நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் Context {{ id }}?"
+            },
+            "detail": {
+                "title": "Context"
+            },
+            "contextName": "Context Name",
+            "contextDescription": "Context Description"
+        }
+    }
+}

@@ -1,0 +1,23 @@
+<!-- <jhi-page-ribbon></jhi-page-ribbon>
+ --><!-- <div>
+    <router-outlet name="navbar"></router-outlet>
+</div>
+<div class="container-fluid">
+    <div class="card jh-card">
+        <router-outlet></router-outlet>
+        <router-outlet name="popup"></router-outlet>
+    </div>
+    <jhi-footer></jhi-footer>
+</div>
+ -->
+ <div>
+	<app-sidebar></app-sidebar>
+    <router-outlet name="navbar"></router-outlet>
+</div>
+<div class="main-container" style="margin-left:230px">
+    <div class="card jh-card" style="margin-top:55px">
+        <router-outlet></router-outlet>
+        <router-outlet name="popup"></router-outlet>
+    </div>
+    <jhi-footer></jhi-footer>
+</div>

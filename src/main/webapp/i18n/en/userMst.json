@@ -1,0 +1,30 @@
+{
+    "slackbotsApp": {
+        "userMst" : {
+            "home": {
+                "title": "User Msts",
+                "createLabel": "Create a new User Mst",
+                "createOrEditLabel": "Create or edit a User Mst",
+                "search": "Search for User Mst"
+            },
+            "created": "A new User Mst is created with identifier {{ param }}",
+            "updated": "A User Mst is updated with identifier {{ param }}",
+            "deleted": "A User Mst is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete User Mst {{ id }}?"
+            },
+            "detail": {
+                "title": "User Mst"
+            },
+            "userId": "User Id",
+            "userEmail": "User Email",
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "active": "Active",
+            "createdOn": "Created On",
+            "createdBy": "Created By",
+            "updatedOn": "Updated On",
+            "updatedBy": "Updated By"
+        }
+    }
+}

@@ -1,0 +1,49 @@
+
+<div *ngIf="rolePermission">
+    <h2><span jhiTranslate="slackbotsApp.rolePermission.detail.title">Role Permission</span> {{rolePermission.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="slackbotsApp.rolePermission.createdOn">Created On</span></dt>
+        <dd>
+            <span>{{rolePermission.createdOn | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span jhiTranslate="slackbotsApp.rolePermission.createdBy">Created By</span></dt>
+        <dd>
+            <span>{{rolePermission.createdBy}}</span>
+        </dd>
+        <dt><span jhiTranslate="slackbotsApp.rolePermission.updatedOn">Updated On</span></dt>
+        <dd>
+            <span>{{rolePermission.updatedOn | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span jhiTranslate="slackbotsApp.rolePermission.updatedBy">Updated By</span></dt>
+        <dd>
+            <span>{{rolePermission.updatedBy}}</span>
+        </dd>
+        <dt><span jhiTranslate="slackbotsApp.rolePermission.role">Role</span></dt>
+        <dd>
+            <div *ngIf="rolePermission.role">
+                <a [routerLink]="['/role-mst', rolePermission.role?.id]">{{rolePermission.role?.roleName}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="slackbotsApp.rolePermission.prm">Prm</span></dt>
+        <dd>
+            <div *ngIf="rolePermission.prm">
+                <a [routerLink]="['/permission-mst', rolePermission.prm?.id]">{{rolePermission.prm?.prmName}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'role-permission/'+ rolePermission.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

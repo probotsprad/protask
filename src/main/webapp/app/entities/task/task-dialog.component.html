@@ -1,0 +1,153 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myTaskLabel" jhiTranslate="slackbotsApp.task.home.createOrEditLabel">Create or edit a Task</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!task.id" style="display:none">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="task.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="slackbotsApp.task.taskName" for="field_taskName">Task Name</label>
+            <input type="text" class="form-control" name="taskName" id="field_taskName"
+                [(ngModel)]="task.taskName" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="slackbotsApp.task.taskDescription" for="field_taskDescription">Task Description</label>
+            <input type="text" class="form-control" name="taskDescription" id="field_taskDescription"
+                [(ngModel)]="task.taskDescription" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="slackbotsApp.task.startDate" for="field_startDate">Start Date</label>
+            <div class="input-group">
+                <input id="field_startDate" type="text" class="form-control" name="startDate" ngbDatepicker  #startDateDp="ngbDatepicker" [(ngModel)]="task.startDate"
+                />
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-secondary" (click)="startDateDp.toggle()"><i class="fa fa-calendar"></i></button>
+                </span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="slackbotsApp.task.endDate" for="field_endDate">End Date</label>
+            <div class="input-group">
+                <input id="field_endDate" type="text" class="form-control" name="endDate" ngbDatepicker  #endDateDp="ngbDatepicker" [(ngModel)]="task.endDate"
+                />
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-secondary" (click)="endDateDp.toggle()"><i class="fa fa-calendar"></i></button>
+                </span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="slackbotsApp.task.remainder" for="field_remainder">Remainder</label>
+            <div class="input-group">
+                <input id="field_remainder" type="text" class="form-control" name="remainder" ngbDatepicker  #remainderDp="ngbDatepicker" [(ngModel)]="task.remainder"
+                />
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-secondary" (click)="remainderDp.toggle()"><i class="fa fa-calendar"></i></button>
+                </span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="slackbotsApp.task.duration" for="field_duration">Duration</label>
+            <input type="text" class="form-control" name="duration" id="field_duration"
+                [(ngModel)]="task.duration" />
+        </div>
+        
+        
+        <div class="form-group">
+			<label class="form-control-label"
+				jhiTranslate="slackbotsApp.task.context" for="field_context">Context</label>
+			<select class="form-control" id="field_context" name="context"
+				[(ngModel)]="task.context">
+				<option [ngValue]="null"></option>
+				<option
+					[ngValue]="taskOption.id === task.context?.id ? task.context : taskOption"
+					*ngFor="let taskOption of contexts trackBy: trackContextById">{{taskOption.contextName}}</option>
+			</select>
+		</div>
+		
+		<div class="form-group">
+			<label class="form-control-label"
+				jhiTranslate="slackbotsApp.task.department" for="field_department">Department</label>
+			<select class="form-control" id="field_department" name="department"
+				[(ngModel)]="task.department">
+				<option [ngValue]="null"></option>
+				<option
+					[ngValue]="departmentOption.id === task.department?.id ? task.department : departmentOption"
+					*ngFor="let departmentOption of departments trackBy: trackdepartmentById">{{department.departmentName}}</option>
+			</select>
+		</div>
+		
+		<div class="form-group">
+			<label class="form-control-label"
+				jhiTranslate="slackbotsApp.task.policies" for="field_policies">Policies</label>
+			<select class="form-control" id="field_policies" name="policies"
+				[(ngModel)]="task.policies">
+				<option [ngValue]="null"></option>
+				<option
+					[ngValue]="policiesOption.id === task.policies?.id ? task.policies : policiesOption"
+					*ngFor="let policiesOption of policiesa trackBy: trackpoliciesById">{{policiesOption.policyName}}</option>
+			</select>
+		</div>
+		
+		<div class="form-group">
+			<label class="form-control-label"
+				jhiTranslate="slackbotsApp.task.category" for="field_category">Category</label>
+			<select class="form-control" id="field_category" name="category"
+				[(ngModel)]="task.category">
+				<option [ngValue]="null"></option>
+				<option
+					[ngValue]="categoryOption.id === task.category?.id ? task.category : categoryOption"
+					*ngFor="let categoryOption of categorys trackBy: trackcategoryById">{{categoryOption.categoryName}}</option>
+			</select>
+		</div>
+		
+	<div class="form-group">
+			<label class="form-control-label"
+				jhiTranslate="slackbotsApp.task.tags" for="field_tags">Tags</label>
+			<select class="form-control" id="field_tags" name="tags"
+				[(ngModel)]="task.tags">
+				<option [ngValue]="null"></option>
+				<option
+					[ngValue]="tagsOption.id === task.tags?.id ? task.tags : tagsOption"
+					*ngFor="let tagsOption of tagsa trackBy: tracktagsById">{{tagsOption.tagName}}</option>
+			</select>
+		</div>
+		
+		<div class="form-group col-md-12 col-sm-12 col-xs-12">
+        		
+        		<div class="row" style="float:right">
+        		
+        			<div clas="col-md-6" style="margin-right:8px">
+        			
+        				<button [routerLink]="['/', { outlets: { popup: 'addSubTask' } }]"  class="btn btn-primary" 
+							style="margin-bottom:5px" type="button"> 
+							<span></span>&nbsp;<span>Add SubTask</span> 
+						</button>
+        			</div>        			
+        			<div clas='col-md-6'>
+        				<button [routerLink]="['/', { outlets: { popup: 'addCondition' } }]"  class="btn btn-primary" 
+							style="margin-bottom:5px" type="button"> 
+							<span></span>&nbsp;<span>Add Condition</span> 
+						</button>
+        			</div>
+        		</div>
+        			</div>
+		
+        
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

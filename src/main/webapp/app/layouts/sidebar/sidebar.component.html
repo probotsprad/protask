@@ -1,0 +1,81 @@
+<nav class="sidebar" [ngClass]="{sidebarPushRight: isActive}">
+
+    <ul class="list-group" >
+        
+         <div  *ngFor="let item of mItems.menuItems">
+        
+        	<a *ngIf="item.title === 'Home' " routerLink="{{ item.linkUrl }}" [routerLinkActive]="['router-link-active']" 
+        	
+        		(click)="addExpandClass( item.expandClassName )"  class="list-group-item" [routerLinkActiveOptions]="{exact: true}" style="font-weight: normal;" >
+        	 
+            		<i class="{{ item.iconClass }}"></i>&nbsp;{{ item.permissionName }}
+            	
+        	</a>
+        	
+        	<div *ngIf="item.title != 'Home' " class="nested-menu">
+        		
+        		<a class="list-group-item" (click)="addExpandClass( item.expandClassName )" style="font-weight: normal;" >
+        		
+                	<span><i class="{{ item.iconClass }}"></i>&nbsp; {{ item.permissionName }}</span>
+                	
+            	</a>
+            	
+            	 <li class="nested" [class.expand]="showMenu === item.expandClassName ">
+            	 
+            	 	 <ul class="submenu">
+            	 			
+            	 			<li *ngFor="let subItems of item.subMenus">
+            	 			
+            	 				<div *ngIf="subItems.submenus2 == false ">
+            	 					
+            	 					<a routerLink= "{{ subItems.linkUrl }}" 
+            	 					 
+            	 					 	[routerLinkActive]="['router-link-active']" class="list-group-item" [routerLinkActiveOptions]="{exact: true}" style="font-weight: normal;">
+            	 					 
+                        					<span>{{ subItems.permissionName }}</span>
+                        				
+                        			</a>
+            	 				
+            	 				 </div>
+            	 				
+            	 			<div *ngIf="subItems.submenus2 == true ">
+            	 					<div class="nested-menu"  > 
+            	 							
+            	 							<a class="list-group-item" (click)="addExpandClass2( subItems.expandClassName )" style="font-weight: normal;" >
+        		
+                								<span> {{ subItems.permissionName }} </span>
+                	
+							            	</a>
+							            	<li class="nested" [hidden]="!showNestedSubMenu" [class.expand]="showMenuSubMenu === subItems.expandClassName ">
+							            		 <ul class="submenu"  style="padding-left:20px">
+							            		 	<li *ngFor="let sbMenu2 of subItems.subMenu2Items">
+							            		 	
+							            					<a routerLink= "{{ sbMenu2.linkUrl }}" 
+            	 					 
+            	 					 						[routerLinkActive]="['router-link-active']" class="list-group-item" [routerLinkActiveOptions]="{exact: true}" style="font-weight: normal;">
+            	 					 
+                        									<span>{{ sbMenu2.permissionName }}</span>
+                        				
+                        									</a>
+							            			</li>
+							            		 </ul>
+							            	</li>
+            	 					
+            	 					</div>
+            	 				
+            	 				</div>
+                        			
+            	 			</li>
+            	 			
+            	 	 </ul>
+            	 	 
+            	 </li>
+        
+        	</div>
+        	
+        </div>
+        
+        
+    </ul>
+     
+</nav>

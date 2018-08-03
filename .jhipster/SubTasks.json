@@ -1,0 +1,11 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [],
+    "changelogDate": "20180728003059",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "sub_tasks",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}

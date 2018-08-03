@@ -1,0 +1,49 @@
+
+<div *ngIf="configData">
+    <h2><span jhiTranslate="slackbotsApp.configData.detail.title">Config Data</span> {{configData.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="slackbotsApp.configData.key">Key</span></dt>
+        <dd>
+            <span>{{configData.key}}</span>
+        </dd>
+        <dt><span jhiTranslate="slackbotsApp.configData.value">Value</span></dt>
+        <dd>
+            <span>{{configData.value}}</span>
+        </dd>
+        <dt><span jhiTranslate="slackbotsApp.configData.encrypted">Encrypted</span></dt>
+        <dd>
+            <span jhiTranslate="{{'slackbotsApp.YesNoFlag.' + configData.encrypted}}">{{configData.encrypted}}</span>
+        </dd>
+        <dt><span jhiTranslate="slackbotsApp.configData.createdOn">Created On</span></dt>
+        <dd>
+            <span>{{configData.createdOn | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="slackbotsApp.configData.createdBy">Created By</span></dt>
+        <dd>
+            <span>{{configData.createdBy}}</span>
+        </dd>
+        <dt><span jhiTranslate="slackbotsApp.configData.updatedOn">Updated On</span></dt>
+        <dd>
+            <span>{{configData.updatedOn | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="slackbotsApp.configData.updatedBy">Updated By</span></dt>
+        <dd>
+            <span>{{configData.updatedBy}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'config-data/'+ configData.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

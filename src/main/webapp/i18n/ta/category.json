@@ -1,0 +1,22 @@
+{
+    "slackbotsApp": {
+        "category" : {
+            "home": {
+                "title": "Categories",
+                "createLabel": "Category-ஐ உருவாக்கு",
+                "createOrEditLabel": "Category -ஐ மாற்று (அ) உருவாக்கு",
+                "search": "Search for Category"
+            },
+            "created": "Category புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "Category மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A Category நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் Category {{ id }}?"
+            },
+            "detail": {
+                "title": "Category"
+            },
+            "categoryName": "Category Name"
+        }
+    }
+}

@@ -1,0 +1,80 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myEmployeeLabel" jhiTranslate="slackbotsApp.employee.home.createOrEditLabel">Create or edit a Employee</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!employee.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="employee.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="slackbotsApp.employee.staffName" for="field_staffName">Staff Name</label>
+            <input type="text" class="form-control" name="staffName" id="field_staffName"
+                [(ngModel)]="employee.staffName" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="slackbotsApp.employee.dateOfBirth" for="field_dateOfBirth">Date Of Birth</label>
+            <div class="input-group">
+                <input id="field_dateOfBirth" type="text" class="form-control" name="dateOfBirth" ngbDatepicker  #dateOfBirthDp="ngbDatepicker" [(ngModel)]="employee.dateOfBirth"
+                />
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-secondary" (click)="dateOfBirthDp.toggle()"><i class="fa fa-calendar"></i></button>
+                </span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="slackbotsApp.employee.gender" for="field_gender">Gender</label>
+            <input type="text" class="form-control" name="gender" id="field_gender"
+                [(ngModel)]="employee.gender" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="slackbotsApp.employee.emailId" for="field_emailId">Email Id</label>
+            <input type="text" class="form-control" name="emailId" id="field_emailId"
+                [(ngModel)]="employee.emailId" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="slackbotsApp.employee.qualification" for="field_qualification">Qualification</label>
+            <input type="text" class="form-control" name="qualification" id="field_qualification"
+                [(ngModel)]="employee.qualification" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="slackbotsApp.employee.designation" for="field_designation">Designation</label>
+            <input type="text" class="form-control" name="designation" id="field_designation"
+                [(ngModel)]="employee.designation" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="slackbotsApp.employee.experience" for="field_experience">Experience</label>
+            <input type="text" class="form-control" name="experience" id="field_experience"
+                [(ngModel)]="employee.experience" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="slackbotsApp.employee.phoneNo" for="field_phoneNo">Phone No</label>
+            <input type="number" class="form-control" name="phoneNo" id="field_phoneNo"
+                [(ngModel)]="employee.phoneNo" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="slackbotsApp.employee.userName" for="field_userName">User Name</label>
+            <input type="text" class="form-control" name="userName" id="field_userName"
+                [(ngModel)]="employee.userName" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="slackbotsApp.employee.password" for="field_password">Password</label>
+            <input type="text" class="form-control" name="password" id="field_password"
+                [(ngModel)]="employee.password" />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

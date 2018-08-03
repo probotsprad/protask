@@ -1,0 +1,23 @@
+{
+    "slackbotsApp": {
+        "policies" : {
+            "home": {
+                "title": "Policies",
+                "createLabel": "Create a new Policies",
+                "createOrEditLabel": "Create or edit a Policies",
+                "search": "Search for Policies"
+            },
+            "created": "A new Policies is created with identifier {{ param }}",
+            "updated": "A Policies is updated with identifier {{ param }}",
+            "deleted": "A Policies is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Policies {{ id }}?"
+            },
+            "detail": {
+                "title": "Policies"
+            },
+            "policyName": "Policy Name",
+            "policyDescription": "Policy Description"
+        }
+    }
+}

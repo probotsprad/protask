@@ -1,0 +1,27 @@
+{
+    "slackbotsApp": {
+        "permissionMst" : {
+            "home": {
+                "title": "Permission Msts",
+                "createLabel": "Create a new Permission Mst",
+                "createOrEditLabel": "Create or edit a Permission Mst",
+                "search": "Search for Permission Mst"
+            },
+            "created": "A new Permission Mst is created with identifier {{ param }}",
+            "updated": "A Permission Mst is updated with identifier {{ param }}",
+            "deleted": "A Permission Mst is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Permission Mst {{ id }}?"
+            },
+            "detail": {
+                "title": "Permission Mst"
+            },
+            "prmName": "Prm Name",
+            "prmDesc": "Prm Desc",
+            "createdOn": "Created On",
+            "createdBy": "Created By",
+            "updatedOn": "Updated On",
+            "updatedBy": "Updated By"
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "slackbotsApp": {
+        "policies" : {
+            "home": {
+                "title": "Policies",
+                "createLabel": "Policies-ஐ உருவாக்கு",
+                "createOrEditLabel": "Policies -ஐ மாற்று (அ) உருவாக்கு",
+                "search": "Search for Policies"
+            },
+            "created": "Policies புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "Policies மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A Policies நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் Policies {{ id }}?"
+            },
+            "detail": {
+                "title": "Policies"
+            },
+            "policyName": "Policy Name",
+            "policyDescription": "Policy Description"
+        }
+    }
+}

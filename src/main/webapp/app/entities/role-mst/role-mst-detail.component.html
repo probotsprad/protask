@@ -1,0 +1,45 @@
+
+<div *ngIf="roleMst">
+    <h2><span jhiTranslate="slackbotsApp.roleMst.detail.title">Role Mst</span> {{roleMst.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="slackbotsApp.roleMst.roleName">Role Name</span></dt>
+        <dd>
+            <span>{{roleMst.roleName}}</span>
+        </dd>
+        <dt><span jhiTranslate="slackbotsApp.roleMst.roleDesc">Role Desc</span></dt>
+        <dd>
+            <span>{{roleMst.roleDesc}}</span>
+        </dd>
+        <dt><span jhiTranslate="slackbotsApp.roleMst.createdOn">Created On</span></dt>
+        <dd>
+            <span>{{roleMst.createdOn | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span jhiTranslate="slackbotsApp.roleMst.createdBy">Created By</span></dt>
+        <dd>
+            <span>{{roleMst.createdBy}}</span>
+        </dd>
+        <dt><span jhiTranslate="slackbotsApp.roleMst.updatedOn">Updated On</span></dt>
+        <dd>
+            <span>{{roleMst.updatedOn | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span jhiTranslate="slackbotsApp.roleMst.updatedBy">Updated By</span></dt>
+        <dd>
+            <span>{{roleMst.updatedBy}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'role-mst/'+ roleMst.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

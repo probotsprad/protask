@@ -1,0 +1,23 @@
+{
+    "slackbotsApp": {
+        "subTask" : {
+            "home": {
+                "title": "Sub Tasks",
+                "createLabel": "Create a new Sub Task",
+                "createOrEditLabel": "Create or edit a Sub Task",
+                "search": "Search for Sub Task"
+            },
+            "created": "A new Sub Task is created with identifier {{ param }}",
+            "updated": "A Sub Task is updated with identifier {{ param }}",
+            "deleted": "A Sub Task is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Sub Task {{ id }}?"
+            },
+            "detail": {
+                "title": "Sub Task"
+            },
+            "taskName": "Task Name",
+            "taskDescription": "Task Description"
+        }
+    }
+}

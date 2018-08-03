@@ -1,0 +1,27 @@
+{
+    "slackbotsApp": {
+        "userRole" : {
+            "home": {
+                "title": "User Roles",
+                "createLabel": "User Role-ஐ உருவாக்கு",
+                "createOrEditLabel": "User Role -ஐ மாற்று (அ) உருவாக்கு",
+                "search": "Search for User Role"
+            },
+            "created": "User Role புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "User Role மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A User Role நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் User Role {{ id }}?"
+            },
+            "detail": {
+                "title": "User Role"
+            },
+            "userId": "User Id",
+            "createdOn": "Created On",
+            "createdBy": "Created By",
+            "updatedOn": "Updated On",
+            "updatedBy": "Updated By",
+            "role": "Role"
+        }
+    }
+}

@@ -1,0 +1,29 @@
+
+<div *ngIf="context">
+    <h2><span jhiTranslate="slackbotsApp.context.detail.title">Context</span> {{context.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="slackbotsApp.context.contextName">Context Name</span></dt>
+        <dd>
+            <span>{{context.contextName}}</span>
+        </dd>
+        <dt><span jhiTranslate="slackbotsApp.context.contextDescription">Context Description</span></dt>
+        <dd>
+            <span>{{context.contextDescription}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'context/'+ context.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

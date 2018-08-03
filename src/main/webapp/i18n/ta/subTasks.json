@@ -1,0 +1,21 @@
+{
+    "slackbotsApp": {
+        "subTasks" : {
+            "home": {
+                "title": "Sub Tasks",
+                "createLabel": "Sub Tasks-ஐ உருவாக்கு",
+                "createOrEditLabel": "Sub Tasks -ஐ மாற்று (அ) உருவாக்கு",
+                "search": "Search for Sub Tasks"
+            },
+            "created": "Sub Tasks புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "Sub Tasks மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A Sub Tasks நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் Sub Tasks {{ id }}?"
+            },
+            "detail": {
+                "title": "Sub Tasks"
+            }
+        }
+    }
+}

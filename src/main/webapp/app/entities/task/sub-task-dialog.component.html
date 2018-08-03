@@ -1,0 +1,35 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="mySubTaskLabel" jhiTranslate="slackbotsApp.subTask.home.createOrEditLabel">Create or edit a Sub Task</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!subTask.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="subTask.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="slackbotsApp.subTask.taskName" for="field_taskName">Task Name</label>
+            <input type="text" class="form-control" name="taskName" id="field_taskName"
+                [(ngModel)]="subTask.taskName" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="slackbotsApp.subTask.taskDescription" for="field_taskDescription">Task Description</label>
+            <input type="text" class="form-control" name="taskDescription" id="field_taskDescription"
+                [(ngModel)]="subTask.taskDescription" />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

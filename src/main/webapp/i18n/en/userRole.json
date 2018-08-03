@@ -1,0 +1,27 @@
+{
+    "slackbotsApp": {
+        "userRole" : {
+            "home": {
+                "title": "User Roles",
+                "createLabel": "Create a new User Role",
+                "createOrEditLabel": "Create or edit a User Role",
+                "search": "Search for User Role"
+            },
+            "created": "A new User Role is created with identifier {{ param }}",
+            "updated": "A User Role is updated with identifier {{ param }}",
+            "deleted": "A User Role is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete User Role {{ id }}?"
+            },
+            "detail": {
+                "title": "User Role"
+            },
+            "userId": "User Id",
+            "createdOn": "Created On",
+            "createdBy": "Created By",
+            "updatedOn": "Updated On",
+            "updatedBy": "Updated By",
+            "role": "Role"
+        }
+    }
+}

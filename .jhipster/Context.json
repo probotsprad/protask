@@ -1,0 +1,20 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "contextName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "contextDescription",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180727211355",
+    "entityTableName": "context",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

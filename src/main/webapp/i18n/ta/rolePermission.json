@@ -1,0 +1,27 @@
+{
+    "slackbotsApp": {
+        "rolePermission" : {
+            "home": {
+                "title": "Role Permissions",
+                "createLabel": "Role Permission-ஐ உருவாக்கு",
+                "createOrEditLabel": "Role Permission -ஐ மாற்று (அ) உருவாக்கு",
+                "search": "Search for Role Permission"
+            },
+            "created": "Role Permission புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "Role Permission மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A Role Permission நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் Role Permission {{ id }}?"
+            },
+            "detail": {
+                "title": "Role Permission"
+            },
+            "createdOn": "Created On",
+            "createdBy": "Created By",
+            "updatedOn": "Updated On",
+            "updatedBy": "Updated By",
+            "role": "Role",
+            "prm": "Prm"
+        }
+    }
+}

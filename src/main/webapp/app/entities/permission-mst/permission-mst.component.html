@@ -1,0 +1,79 @@
+<div>
+    <h2>
+        <span jhiTranslate="slackbotsApp.permissionMst.home.title">Permission Msts</span>
+        <button class="btn btn-primary float-right jh-create-entity create-permission-mst" [routerLink]="['/', { outlets: { popup: ['permission-mst-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span class="hidden-sm-down"  jhiTranslate="slackbotsApp.permissionMst.home.createLabel">
+            Create new Permission Mst
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+        <div class="col-sm-12">
+            <form name="searchForm" class="form-inline">
+                <div class="input-group w-100 mt-3">
+                    <input type="text" class="form-control" [(ngModel)]="currentSearch" id="currentSearch" name="currentSearch" placeholder="{{ 'slackbotsApp.permissionMst.home.search' | translate }}">
+                    <button class="input-group-addon btn btn-info" (click)="search(currentSearch)">
+                        <span class="fa fa-search"></span>
+                    </button>
+                    <button class="input-group-addon btn btn-danger" (click)="clear()" *ngIf="currentSearch">
+                        <span class="fa fa-trash-o"></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="permissionMsts">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="slackbotsApp.permissionMst.prmName">Prm Name</span></th>
+            <th><span jhiTranslate="slackbotsApp.permissionMst.prmDesc">Prm Desc</span></th>
+            <th><span jhiTranslate="slackbotsApp.permissionMst.createdOn">Created On</span></th>
+            <th><span jhiTranslate="slackbotsApp.permissionMst.createdBy">Created By</span></th>
+            <th><span jhiTranslate="slackbotsApp.permissionMst.updatedOn">Updated On</span></th>
+            <th><span jhiTranslate="slackbotsApp.permissionMst.updatedBy">Updated By</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let permissionMst of permissionMsts ;trackBy: trackId">
+                <td><a [routerLink]="['../permission-mst', permissionMst.id ]">{{permissionMst.id}}</a></td>
+                <td>{{permissionMst.prmName}}</td>
+                <td>{{permissionMst.prmDesc}}</td>
+                <td>{{permissionMst.createdOn | date:'mediumDate'}}</td>
+                <td>{{permissionMst.createdBy}}</td>
+                <td>{{permissionMst.updatedOn | date:'mediumDate'}}</td>
+                <td>{{permissionMst.updatedBy}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../permission-mst', permissionMst.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'permission-mst/'+ permissionMst.id + '/edit'} }]"
+                                replaceUrl="true"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'permission-mst/'+ permissionMst.id + '/delete'} }]"
+                                replaceUrl="true"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

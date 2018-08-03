@@ -1,0 +1,29 @@
+
+<div *ngIf="subTask">
+    <h2><span jhiTranslate="slackbotsApp.subTask.detail.title">Sub Task</span> {{subTask.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="slackbotsApp.subTask.taskName">Task Name</span></dt>
+        <dd>
+            <span>{{subTask.taskName}}</span>
+        </dd>
+        <dt><span jhiTranslate="slackbotsApp.subTask.taskDescription">Task Description</span></dt>
+        <dd>
+            <span>{{subTask.taskDescription}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'sub-task/'+ subTask.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

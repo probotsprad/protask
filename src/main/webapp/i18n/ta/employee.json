@@ -1,0 +1,31 @@
+{
+    "slackbotsApp": {
+        "employee" : {
+            "home": {
+                "title": "Employees",
+                "createLabel": "Employee-ஐ உருவாக்கு",
+                "createOrEditLabel": "Employee -ஐ மாற்று (அ) உருவாக்கு",
+                "search": "Search for Employee"
+            },
+            "created": "Employee புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "Employee மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A Employee நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் Employee {{ id }}?"
+            },
+            "detail": {
+                "title": "Employee"
+            },
+            "staffName": "Staff Name",
+            "dateOfBirth": "Date Of Birth",
+            "gender": "Gender",
+            "emailId": "Email Id",
+            "qualification": "Qualification",
+            "designation": "Designation",
+            "experience": "Experience",
+            "phoneNo": "Phone No",
+            "userName": "User Name",
+            "password": "Password"
+        }
+    }
+}

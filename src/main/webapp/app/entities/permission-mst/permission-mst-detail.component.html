@@ -1,0 +1,45 @@
+
+<div *ngIf="permissionMst">
+    <h2><span jhiTranslate="slackbotsApp.permissionMst.detail.title">Permission Mst</span> {{permissionMst.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="slackbotsApp.permissionMst.prmName">Prm Name</span></dt>
+        <dd>
+            <span>{{permissionMst.prmName}}</span>
+        </dd>
+        <dt><span jhiTranslate="slackbotsApp.permissionMst.prmDesc">Prm Desc</span></dt>
+        <dd>
+            <span>{{permissionMst.prmDesc}}</span>
+        </dd>
+        <dt><span jhiTranslate="slackbotsApp.permissionMst.createdOn">Created On</span></dt>
+        <dd>
+            <span>{{permissionMst.createdOn | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span jhiTranslate="slackbotsApp.permissionMst.createdBy">Created By</span></dt>
+        <dd>
+            <span>{{permissionMst.createdBy}}</span>
+        </dd>
+        <dt><span jhiTranslate="slackbotsApp.permissionMst.updatedOn">Updated On</span></dt>
+        <dd>
+            <span>{{permissionMst.updatedOn | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span jhiTranslate="slackbotsApp.permissionMst.updatedBy">Updated By</span></dt>
+        <dd>
+            <span>{{permissionMst.updatedBy}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'permission-mst/'+ permissionMst.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

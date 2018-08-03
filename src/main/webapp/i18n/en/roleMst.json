@@ -1,0 +1,28 @@
+{
+    "slackbotsApp": {
+        "roleMst" : {
+            "home": {
+                "title": "Role Msts",
+                "createLabel": "Create a new Role Mst",
+                "createOrEditLabel": "Create or edit a Role Mst",
+                "search": "Search for Role Mst"
+            },
+            "created": "A new Role Mst is created with identifier {{ param }}",
+            "updated": "A Role Mst is updated with identifier {{ param }}",
+            "deleted": "A Role Mst is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Role Mst {{ id }}?"
+            },
+            "detail": {
+                "title": "Role Mst"
+            },
+            "roleName": "Role Name",
+            "roleDesc": "Role Desc",
+            "createdOn": "Created On",
+            "createdBy": "Created By",
+            "updatedOn": "Updated On",
+            "updatedBy": "Updated By",
+            "roleNames": "Role Names"
+        }
+    }
+}

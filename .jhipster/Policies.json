@@ -1,0 +1,20 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "policyName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "policyDescription",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180727211109",
+    "entityTableName": "policies",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

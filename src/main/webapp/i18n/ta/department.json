@@ -1,0 +1,22 @@
+{
+    "slackbotsApp": {
+        "department" : {
+            "home": {
+                "title": "Departments",
+                "createLabel": "Department-ஐ உருவாக்கு",
+                "createOrEditLabel": "Department -ஐ மாற்று (அ) உருவாக்கு",
+                "search": "Search for Department"
+            },
+            "created": "Department புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "Department மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A Department நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் Department {{ id }}?"
+            },
+            "detail": {
+                "title": "Department"
+            },
+            "departmentName": "Department Name"
+        }
+    }
+}

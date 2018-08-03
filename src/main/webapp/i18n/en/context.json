@@ -1,0 +1,23 @@
+{
+    "slackbotsApp": {
+        "context" : {
+            "home": {
+                "title": "Contexts",
+                "createLabel": "Create a new Context",
+                "createOrEditLabel": "Create or edit a Context",
+                "search": "Search for Context"
+            },
+            "created": "A new Context is created with identifier {{ param }}",
+            "updated": "A Context is updated with identifier {{ param }}",
+            "deleted": "A Context is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Context {{ id }}?"
+            },
+            "detail": {
+                "title": "Context"
+            },
+            "contextName": "Context Name",
+            "contextDescription": "Context Description"
+        }
+    }
+}

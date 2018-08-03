@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180727210651_added_entity_Category.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180727211109_added_entity_Policies.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180727211355_added_entity_Context.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180727212004_added_entity_Tags.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180727212527_added_entity_Employee.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180727231641_added_entity_Task.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180727233225_added_entity_Department.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180728001457_added_entity_SubTask.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180728003059_added_entity_SubTasks.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180728003059_added_entity_SubTasks.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180728231641_added_columns_entity_Task.xml" relativeToChangelogFile="false"/>   
+    <include file="config/liquibase/changelog/20180728081447_added_entity_ConfigData.xml" relativeToChangelogFile="false"/>
+    <!-- <include file="config/liquibase/changelog/20180728081722_added_entity_UserMst.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180728081723_added_entity_RoleMst.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180728081724_added_entity_PermissionMst.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180728081725_added_entity_UserRole.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180728081726_added_entity_RolePermission.xml" relativeToChangelogFile="false"/> -->
+    
+    <include file="config/liquibase/changelog/20171129115302_added_entity_UserMst.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171129115303_added_entity_RoleMst.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171129115304_added_entity_PermissionMst.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171129115305_added_entity_UserRole.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20171129115306_added_entity_RolePermission.xml" relativeToChangelogFile="false"/>
+    
+    
+    
+    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+ <!--    <include file="config/liquibase/changelog/20180728081725_added_entity_constraints_UserRole.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180728081726_added_entity_constraints_RolePermission.xml" relativeToChangelogFile="false"/> -->
+    <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
+</databaseChangeLog>
